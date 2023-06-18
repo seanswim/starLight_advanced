@@ -12,7 +12,8 @@ const init = () => {
   document.body.appendChild(renderer.domElement);
 
   renderer.setSize(window.innerWidth, window.innerHeight);
-  
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
     75, 
